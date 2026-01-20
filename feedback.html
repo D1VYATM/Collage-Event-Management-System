@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Feedback</h3>
+<form method="post">
+  <div class="mb-3">
+    <label>Name (optional)</label>
+    <input name="name" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label>Email (optional)</label>
+    <input name="email" type="email" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label>Message</label>
+    <textarea name="message" class="form-control" required></textarea>
+  </div>
+  <button class="btn btn-primary">Send Feedback</button>
+</form>
+{% endblock %}

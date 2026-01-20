@@ -1,0 +1,160 @@
+/* ===== YOUR OLD CODE (kept safely) ===== */
+body {
+    padding-bottom: 40px;
+}
+
+/* ===== NEW BEAUTIFUL UI STYLING ===== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image:url('https://everwall.com/wp-content/uploads/2023/09/19FunWorkSocialEventIdeas-png-00.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: rgb(61, 10, 90);
+}
+
+/* Main card container */
+.container {
+    max-width: 550px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(210, 212, 221, 0.404);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(82, 38, 38, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Input fields */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #e4ebdb;
+    color: #7f95bb;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #041524;
+}
+
+/* Event Cards */
+.event-card {
+    background: rgb(95, 177, 209);
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* Floating Chatbot Button */
+#chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #9050da;
+    color: rgb(46, 58, 117);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* Floating Chatbot Box */
+#chatbot-float-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: rgb(31, 10, 82);
+    border-radius: 9px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+/* Messages */
+.msg {
+    max-width: 85%;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    color:black;
+    font-family:monospace;
+}
+
+.msg.user {
+    background: #daa1df;
+    margin-left: auto;
+}
+
+.msg.bot {
+    background: #a488bb;
+}
+
+
+
+/* ===== Left Sidebar Layout ===== */
+#page-wrapper { min-height: 100vh; }
+
+/* Sidebar */
+#side-nav {
+  width: 220px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 1000;
+  transition: width 0.2s ease;
+}
+
+/* collapse */
+#side-nav.collapsed { width: 70px; }
+
+/* main content should appear to the right of sidebar */
+#main-content {
+  margin-left: 220px; /* same as sidebar width */
+  transition: margin-left 0.2s ease;
+}
+
+/* when sidebar collapsed, adjust main area */
+#side-nav.collapsed + #main-content,
+#main-content.collapsed { margin-left: 70px; }
+
+/* Link styles */
+#side-nav .nav-link { color: rgba(255,255,255,0.95); padding: 10px 12px; }
+#side-nav .nav-link:hover { background: rgba(255,255,255,0.03); }
+
+/* small responsive */
+@media (max-width: 768px) {
+  #side-nav { position: relative; width: 100%; min-height: auto; }
+  #main-content { margin-left: 0; }
+  #side-nav.collapsed { width: 100%; }
+}
+
+/* ensure chatbot stays above */
+#chatbot-btn, #chatbot-float-box { z-index: 2000; }
